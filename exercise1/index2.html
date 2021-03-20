@@ -4,42 +4,37 @@
         <meta charset="UTF-8">
         <title>Nasz dokument</title>
         <style>
-            body div > span  {
-                background-color: #aaa;
-            }
 
-            input[type] {
-                border: 1px solid #f00;
-                width: 26px;
-                height: 26px;
+            * {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                box-sizing: border-box;
             }
 
             input[type=text] {
-                width: auto;
+                width: 100%;
+                padding: 10px 10px;
+                border: 1px solid #ddd;
+                margin: 5px 10px 10px 10px;
             }
 
-            #imieid {
-                background-color: #00f;
+            html {
+                font-size: 16px;
             }
 
-            h1.tekst-powitalny {
-                color: green;
+            h1 {
+                font-size: 4rem;
             }
 
-            h1.wazne {
-                background-color: red;
+            legend {
+                padding: 0;
+                margin: 0 0 10px 0;
             }
 
-            h1 ~ div   {
-                background-color: yellow;
-            }
+            fieldset {
+                border: none;
+                margin: 0 0 10px 0;
+                padding: 0;
 
-            h1.tekst-powitalny#witaj{
-                background-color: yellow;
-            }
-
-            #witaj {
-                background-color: black;
             }
 
 
@@ -51,26 +46,30 @@
         <!--to jest tytuł głowny formularza-->
         <h1 class="tekst-powitalny wazne" id="witaj">Witaj w formularzu</h1>
 
-        <div>div1</div>
-        <span>tekst w spanie</span>
-        <div>div2</div>
-
         <p>
-            Aby zapisać się     na
+            Aby zapisać się na
             szczepienie wypełnij
             poniższy&nbsp;formularz.<br>
             Testowa linia <span>tekst w spanie</span> <span>tekst w spanie2</span>
-            <a href="http://ala.com:80/apka1/index.html?a=5&b=6&c=ala" target="_self">Idź do index</a>
+            <a href="http://ala.com:80/apka1/index.html?a=5&b=6&c=ala" target="_self">więcej iformacji</a>
+        </p>
+
+        <p>
+            Przed szczepieniem musisz byc:
         </p>
 
         <ul>
-            <li>jabłko</li>
-            <li>gruszka</li>
+            <li>wyspany</li>
+            <li>zdrowy</li>
         </ul>
 
+        <p>
+            Po szczepieniu musisz:
+        </p>
+
         <ol>
-            <li>jabłko</li>
-            <li>gruszka</li>
+            <li>odczekać 15 minut</li>
+            <li>udać się do domu</li>
         </ol>
 
 
@@ -86,9 +85,6 @@
             </tr>
             <tr>
                 <td>Novavax</td>
-            </tr>
-            <tr>
-                <td colspan="2">Novavax2</td>
             </tr>
             </tbody>
         </table>
