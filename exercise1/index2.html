@@ -10,13 +10,46 @@
 
             input[type] {
                 border: 1px solid #f00;
+                width: 26px;
+                height: 26px;
             }
+
+            input[type=text] {
+                width: auto;
+            }
+
+            #imieid {
+                background-color: #00f;
+            }
+
+            h1.tekst-powitalny {
+                color: green;
+            }
+
+            h1.wazne {
+                background-color: red;
+            }
+
+            h1 ~ div   {
+                background-color: yellow;
+            }
+
+            h1.tekst-powitalny#witaj{
+                background-color: yellow;
+            }
+
+            #witaj {
+                background-color: black;
+            }
+
+
+
 
         </style>
     </head>
     <body>
         <!--to jest tytuł głowny formularza-->
-        <h1>Witaj w formularzu</h1>
+        <h1 class="tekst-powitalny wazne" id="witaj">Witaj w formularzu</h1>
 
         <div>div1</div>
         <span>tekst w spanie</span>
