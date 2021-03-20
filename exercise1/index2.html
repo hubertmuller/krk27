@@ -64,11 +64,33 @@
                 <input type="text" size="50" value="Nowak" name="nazwisko" id="nazwiskoid" maxlength="50" accesskey="n" tabindex="2">
             </div>
             <div>
-                <label for="kobietaid">kobieta</label>
-                <input type="radio" id="kobietaid" value="1" name="plec">
-                <label for="mezczyznaid">mężczyzna</label>
-                <input type="radio" id="mezczyznaid" value="0" name="plec">
-
+                <fieldset>
+                    <legend>Płeć:</legend>
+                    <label for="kobietaid">kobieta</label>
+                    <input type="radio" id="kobietaid" value="k" name="plec">
+                    <label for="mezczyznaid">mężczyzna</label>
+                    <input type="radio" id="mezczyznaid" value="m" name="plec">
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Życzenia:</legend>
+                    <label for="zostacid">chcę zostać 1 godzinę</label>
+                    <input type="checkbox" id="zostacid" value="z" name="zyczenia">
+                    <label for="potwierdzid">chcę dostać potwierdzenie</label>
+                    <input type="checkbox" id="potwierdzid" value="p" name="zyczenia">
+                </fieldset>
+            </div>
+            <div>
+                <label for="typid">Typ szczepionki</label>
+                <select id="typid" name="typ">
+                    <option value="1">Pfizer</option>
+                    <option value="2">Novavax</option>
+                </select>
+            </div>
+            <div>
+                <label for="komentarzid">Komentarz</label><br>
+                <textarea rows="10" cols="40" id="komentarzid" name="komentarze"></textarea>
             </div>
 
         </form>
