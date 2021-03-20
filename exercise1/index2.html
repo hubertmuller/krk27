@@ -3,6 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Nasz dokument</title>
+        <style>
+            body div > span  {
+                background-color: #aaa;
+            }
+
+            input[type] {
+                border: 1px solid #f00;
+            }
+
+        </style>
     </head>
     <body>
         <!--to jest tytuł głowny formularza-->
@@ -91,6 +101,10 @@
             <div>
                 <label for="komentarzid">Komentarz</label><br>
                 <textarea rows="10" cols="40" id="komentarzid" name="komentarze"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Zapisz">
+
             </div>
 
         </form>
