@@ -1,2 +1,4 @@
-var x= 0;
-alert(x);
+var powitanie="Hello World";
+alert(powitanie);
+console.log(powitanie + powitanie);
+
