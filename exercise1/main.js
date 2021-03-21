@@ -1,18 +1,22 @@
 window.addEventListener('load', () => {
     let forma = document.forma;
-    let doSprawdzenia = ['imie', 'nazwisko'];
+    let doSprawdzenia = [
+        {nazwa:'imie', re: /(^[A-Z]+$)/g },
+        {nazwa:'nazwisko', re: /(^[a-z]+$)/g }
+    ];
 
     let sprawdz = (listaSpr, stanFormy) => {
         listaSpr.forEach( (el) => {
             console.log('-',el);
             let znaleziono = false;
             let pole;
+            let reg;
             for (let i = 0; i < stanFormy.length; i++) {
                 console.log('*', stanFormy[i]);
                 let nazwaPola = stanFormy[i][0];
-                let wartoscPola = stanFormy[i][1];
-                if (nazwaPola === el ) {
+                if (nazwaPola === el.nazwa ) {
                     znaleziono = true;
+                    reg = el.re;
                     pole = stanFormy[i];
                     break;
                 }
@@ -21,9 +25,12 @@ window.addEventListener('load', () => {
             if (znaleziono) {
                 let nazwa = pole[0];
                 let wartosc = pole[1];
-                console.log('ok', nazwa, wartosc);
-                const regex = /([A-Za-z]+)/g;
-
+                console.log('ok', nazwa, wartosc, reg);
+                if (wartosc.match(reg)) {
+                    console.log('swietnie!')
+                } else {
+                    console.log('cos dizwnego')
+                }
 
             }
         } )
