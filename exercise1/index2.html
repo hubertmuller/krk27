@@ -5,10 +5,12 @@
         <title>Nasz dokument</title>
         <style>
 
+
             * {
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 box-sizing: border-box;
             }
+
 
             input[type=text], select, textarea, input[type=submit] {
                 width: 100%;
@@ -35,8 +37,16 @@
                 height: 1em;
             }
 
-            html {
-                font-size: 16px;
+            @media (min-width: 1000px) {
+                html {
+                    font-size: 16px;
+                }
+            }
+
+            @media (max-width: 1000px) {
+                html {
+                    font-size: 12px;
+                }
             }
 
             h1 {
@@ -71,6 +81,11 @@
                 font-weight: 600;
             }
 
+            @media print {
+                form {
+                    visibility: hidden;
+                }
+            }
 
 
 
@@ -127,7 +142,13 @@
             Jezeli masz &lt; 15 lat a Twoja matka 90, możecie zaszczepić się od razu
         </p>
 
+
+
+
+
         <form action="index.html" method="post">
+    <div style="display: flex; flex-direction: row">
+        <div style="flex-grow:2;">
             <div>
                 <label for="imieid">Imie</label>
                 <input type="text" size="30" value="" placeholder="np. Adam" name="imie" id="imieid" maxlength="40" accesskey="i" tabindex="1">
@@ -136,6 +157,25 @@
                 <label for="nazwiskoid">Nazwisko</label>
                 <input type="text" size="50" value="" placeholder="np. Kowalski" name="nazwisko" id="nazwiskoid" maxlength="50" accesskey="n" tabindex="2">
             </div>
+
+            <div>
+                <label for="typid">Typ szczepionki</label>
+                <select id="typid" name="typ">
+                    <option value="1">Pfizer</option>
+                    <option value="2">Novavax</option>
+                </select>
+            </div>
+            <div>
+                <label for="komentarzid">Komentarz</label><br>
+                <textarea rows="10" cols="40" id="komentarzid" name="komentarze"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Zapisz">
+
+            </div>
+
+        </div>
+        <div style="flex-grow:1;">
             <div>
                 <fieldset>
                     <legend>Płeć:</legend>
@@ -154,24 +194,10 @@
                     <label for="potwierdzid">chcę dostać potwierdzenie</label>
                 </fieldset>
             </div>
-            <div>
-                <label for="typid">Typ szczepionki</label>
-                <select id="typid" name="typ">
-                    <option value="1">Pfizer</option>
-                    <option value="2">Novavax</option>
-                </select>
-            </div>
-            <div>
-                <label for="komentarzid">Komentarz</label><br>
-                <textarea rows="10" cols="40" id="komentarzid" name="komentarze"></textarea>
-            </div>
-            <div>
-                <input type="submit" value="Zapisz">
 
-            </div>
-
+        </div>
+    </div>
         </form>
-
 
     </body>
 </html>
