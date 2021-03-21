@@ -1,4 +1,7 @@
-var powitanie="Hello World";
-alert(powitanie);
-console.log(powitanie + powitanie);
+window.addEventListener('load', () => {
+   alert(1);
+
+
+});
+alert(2);
 
