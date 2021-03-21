@@ -10,11 +10,29 @@
                 box-sizing: border-box;
             }
 
-            input[type=text] {
+            input[type=text], select, textarea, input[type=submit] {
                 width: 100%;
                 padding: 10px 10px;
                 border: 1px solid #ddd;
-                margin: 5px 10px 10px 10px;
+                margin: 5px 0 10px 0;
+                font-size: 1rem;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #f88;
+            }
+
+            label, legend {
+                font-weight: 600;
+            }
+
+            fieldset > label {
+                font-weight: normal;
+            }
+
+            input[type=checkbox], input[type='radio'] {
+                width: 1em;
+                height: 1em;
             }
 
             html {
@@ -35,6 +53,22 @@
                 margin: 0 0 10px 0;
                 padding: 0;
 
+            }
+
+            table {
+                border-collapse: collapse;
+                border: 1px solid #aaa;
+            }
+
+            td, th, caption {
+                padding: 0.5rem;
+            }
+
+            caption {
+                background-color: #ddd;
+                border: 1px solid #aaa;
+                border-bottom-width: 0;
+                font-weight: 600;
             }
 
 
@@ -96,28 +130,28 @@
         <form action="index.html" method="post">
             <div>
                 <label for="imieid">Imie</label>
-                <input type="text" size="30" value="Robert" name="imie" id="imieid" maxlength="40" accesskey="i" tabindex="1">
+                <input type="text" size="30" value="" placeholder="np. Adam" name="imie" id="imieid" maxlength="40" accesskey="i" tabindex="1">
             </div>
             <div>
                 <label for="nazwiskoid">Nazwisko</label>
-                <input type="text" size="50" value="Nowak" name="nazwisko" id="nazwiskoid" maxlength="50" accesskey="n" tabindex="2">
+                <input type="text" size="50" value="" placeholder="np. Kowalski" name="nazwisko" id="nazwiskoid" maxlength="50" accesskey="n" tabindex="2">
             </div>
             <div>
                 <fieldset>
                     <legend>Płeć:</legend>
-                    <label for="kobietaid">kobieta</label>
                     <input type="radio" id="kobietaid" value="k" name="plec">
-                    <label for="mezczyznaid">mężczyzna</label>
+                    <label for="kobietaid">kobieta</label>
                     <input type="radio" id="mezczyznaid" value="m" name="plec">
+                    <label for="mezczyznaid">mężczyzna</label>
                 </fieldset>
             </div>
             <div>
                 <fieldset>
                     <legend>Życzenia:</legend>
-                    <label for="zostacid">chcę zostać 1 godzinę</label>
                     <input type="checkbox" id="zostacid" value="z" name="zyczenia">
-                    <label for="potwierdzid">chcę dostać potwierdzenie</label>
+                    <label for="zostacid">chcę zostać 1 godzinę</label>
                     <input type="checkbox" id="potwierdzid" value="p" name="zyczenia">
+                    <label for="potwierdzid">chcę dostać potwierdzenie</label>
                 </fieldset>
             </div>
             <div>
