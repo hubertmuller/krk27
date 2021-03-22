@@ -83,3 +83,20 @@ caption {
         visibility: hidden;
     }
 }
+
+.noerror {
+    display: none;
+}
+
+.error {
+    background-color: #ff8888;
+    display: block;
+}
+
+select.noerror, textarea.noerror, input.noerror {
+    display: block;
+}
+
+select.error, textarea.error, input.error {
+     background-color: #ff8888;
+ }

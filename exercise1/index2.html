@@ -75,6 +75,9 @@
                     <input type="radio" id="mezczyznaid" value="m" name="plec">
                     <label for="mezczyznaid">mężczyzna</label>
                 </fieldset>
+                <div id="plecError" class="noerror">
+                    Musisz wybrac plec
+                </div>
             </div>
             <div>
                 <fieldset>
@@ -84,13 +87,20 @@
                     <input type="checkbox" id="potwierdzid" value="p" name="zyczenia">
                     <label for="potwierdzid">chcę dostać potwierdzenie</label>
                 </fieldset>
+                <div id="zyczeniaError" class="noerror">
+                    Musisz wybrac zyczenie
+                </div>
             </div>
             <div>
                 <label for="typid">Typ szczepionki</label>
                 <select id="typid" name="typ">
+                    <option disabled selected value> Wybierz </option>
                     <option value="1">Pfizer</option>
                     <option value="2">Novavax</option>
                 </select>
+                <div id="typError" class="noerror">
+                    Musisz wybrac typ
+                </div>
             </div>
             <div>
                 <label for="komentarzid">Komentarz</label><br>
