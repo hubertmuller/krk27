@@ -5,10 +5,13 @@ Prosze zwrocic uwage ze pozwala to ustawiania listenera na zmiane i wyslanie w f
 on juz istnienie w dokumencie
  */
 
+console.log('start skryptu  (1)');
+
 window.addEventListener('load', () => {
     /* forma przechowuje uchwyt elementu w dokumencie ktory reprezentuje nasz pormularz
     - wiazanie nastepuje po wartosci atrybutu name w znaczniku form
      */
+    console.log('wewnatrz listenere - sam poczatek (3)');
     let forma = document.forma;
 
     /*
@@ -66,7 +69,7 @@ window.addEventListener('load', () => {
                     znalezionePoleFormy = poleFormy;
                     break;
                 }
-            };
+            }
 
             let blad = sprawdzCzyBladDopasowania(znalezionePoleFormy, elementDoSprawdzenia);
             if (blad) formaPoprawna = false;
@@ -136,3 +139,5 @@ window.addEventListener('load', () => {
         if (!formaPoprawna) target.preventDefault();
     });
 });
+
+console.log('koniec skryptu (2)');
