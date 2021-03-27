@@ -1,0 +1,20 @@
+@mixin blok()
+  display: inline-block
+  position: absolute
+
+$szerokoscbazowa: 50px
+
+a
+  width: $szerokoscbazowa * 3
+  @include blok
+
+
+div
+  width: $szerokoscbazowa
+  @include blok
+  div
+    background-color: red
+    @include blok
+    span
+      background-color: #ff8888
+      @include blok

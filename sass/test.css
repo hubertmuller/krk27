@@ -1,0 +1,23 @@
+a {
+  width: 150px;
+  display: inline-block;
+  position: absolute;
+}
+
+div {
+  width: 50px;
+  display: inline-block;
+  position: absolute;
+}
+div div {
+  background-color: red;
+  display: inline-block;
+  position: absolute;
+}
+div div span {
+  background-color: #ff8888;
+  display: inline-block;
+  position: absolute;
+}
+
+/*# sourceMappingURL=test.css.map */
