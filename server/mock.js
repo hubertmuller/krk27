@@ -4,10 +4,11 @@ const port = 3200;
 const server = http.createServer( (req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-type', 'text/plain');
-    //res.setHeader('Content-type', 'application/json');
+    //:res.setHeader('Content-type', 'application/json');
+    let test = Math.random();
     res.end(`<html>
     <head></head>
-    <body>Czesc</body>
+    <body>Czesc ${test}</body>
     </html>`);
 });
 
